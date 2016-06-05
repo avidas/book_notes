@@ -68,5 +68,20 @@
 
 ### CH 8: Combining Objects with Composition
 
-* In composition, the larger object is connected to its parts via a has-a relationship.
-
+* In composition, the larger object is connected to its parts via a has-a relationship. It communicates with them via an interface.
+* Factory is an object that manufactures other objects. It can isolate all the knowledge required to create a valid object instead of being dispersed throughout the application
+* OpenStruct is convenient way to bundle a number of attributes into an object. It can be used to bundle attributes to play a certain Role
+* Aggregation is similar to composition except the contained object has an independent life
+* Inheritance: For the cost of arranging objects in a hierarchy, you get message delegation for free. Classical inheritance is a code arrangement technique. Behavior is dispersed among objects and these objects are organized into class relationships such that automatic delegation of messages invokes the correct behavior
+* Composition: Objects stand alone and as a result must explicitly know about and delegate messages
+to one another. Composition allows objects to have structural independence, but at the cost of explicit message delegation. Composition contains far fewer built-in dependencies than inheritance; it is very often the best choice.
+* Use of inheritance results in code that can be described as open–closed; hierarchies
+are open for extension while remaining closed for modification. Hierarchies are therefore exemplary; by
+their nature they provide guidance for writing the code to extend them.
+* Inheritance may create situation when no way to ad new behavior or make future users tolerate the dependencies inheritance demands
+* Avoid writing frameworks that require users of your code to subclass your objects in order to gain your behavior. Their application’s objects may already be arranged in a hierarchy; inheriting from your framework may not be possible
+* Composition results in applications built of simple, pluggable objects that are easy to extend and have a high tolerance for change, since it is more transparent. Because composed objects deal with their parts via an interface, adding a new kind of part is a simple matter of plugging in a new object that honors the interface.
+* Composition is excellent at prescribing rules for assembling an object made of parts but doesn’t provide as much help for the problem of arranging code for a collection of parts that are very nearly
+identical.
+* Use Duck Types for behaves-like-a Relationships: Playing the role is not Objects main responsibility, many otherwise unrelated objects share a desire to play the same role
+* For every problem, assess the costs and benefits of alternative design techniques and use your judgment and experience to make the best choice.
