@@ -85,3 +85,18 @@ their nature they provide guidance for writing the code to extend them.
 identical.
 * Use Duck Types for behaves-like-a Relationships: Playing the role is not Objects main responsibility, many otherwise unrelated objects share a desire to play the same role
 * For every problem, assess the costs and benefits of alternative design techniques and use your judgment and experience to make the best choice.
+
+### CH 9: Designing Cost-Effective Tests
+
+* Tests help with 
+    1. Finding Bugs 
+    2. Supplying Documentation
+    3. Deferring Design Decisions
+    4. Supporting Abstractions
+    5. Exposing Design Flaws
+
+* The true purpose of testing, just like the true purpose of design, is to reduce costs.
+* Incoming messages should be tested for the state they return. Outgoing command messages should be tested to ensure they get sent. Outgoing query messages should not be tested.
+* When your intention is to defer a design decision, do the simplest thing that solves today’s problem.
+* From the point of view of the object under test, every other object is a role and dealing with objects as if they are representatives of the roles they play loosens coupling and increases flexibility, both in your application and in your tests.
+* If you leverage Liskov and create new subclasses that are used exclusively for testing, consider requiring these subclasses to pass your subclass responsibility test to ensure they don’t accidentally become obsolete.
